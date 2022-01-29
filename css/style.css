@@ -1,0 +1,317 @@
+/*Fontes*/
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=EB+Garamond:ital@0;1&family=Josefin+Sans:wght@300&display=swap");
+
+/*Tirando pré-definições*/
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/*Definindo cores*/
+:root {
+  --marron1: #694e4e;
+  --marron2: #c1a3a3;
+  --rosa1: #f3c5c5;
+  --rosa2: #ffefef;
+  --azul1: #7c99ac;
+  --azul2: #92a9bd;
+  --azul3: #d3dedc;
+  --azul4: #1572a1;
+}
+
+/*HEADER*/
+header {
+  width: 100%;
+  height: 600px;
+  background: var(--marron2);
+}
+
+/*conf a classe cabecalho*/
+.cabecalho {
+  max-width: 1000px; /*se der, chega a 10008*/
+  min-width: 300px; /*se não der, chega apenas a 300*/
+  margin: 0 auto; /*maneira de ficar centralizado*/
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/*imagem logo*/
+.imagem-cabecalho {
+  height: 120px;
+  border-radius: 20%;
+}
+
+/*conf nav*/
+nav {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*parte escrita*/
+.logo {
+  font-size: 24px;
+  color: var(--azul4);
+  cursor: pointer;
+}
+
+/*lista toda*/
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+/*itens da lista*/
+nav ul li {
+  list-style: none; /*tirou os pontos dos itens*/
+  padding: 10px; /*distancia entre os itens*/
+}
+
+/*cada item da lita*/
+nav ul li a {
+  color: var(--azul4);
+  text-decoration: none; /*tirar o sublinhado*/
+}
+
+/*mudar a cor qdo passar o mouse*/
+nav ul li a:hover {
+  color: #000285;
+}
+
+/*conf botao do cabecalho*/
+nav ul button {
+  border: 1px solid var(--azul3);
+  background: transparent;
+  padding: 2px 40px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: var(--azul4);
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/*conf botao do cabecalho*/
+nav ul button:hover {
+  background: var(--rosa2);
+  color: black;
+}
+
+/*o quadrado formado na frente*/
+.cabecalho .header-block {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 365px;
+  background: var(--azul2);
+  border-radius: 8px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*conf a imagem do header-block*/
+.header-block img {
+  width: 40%;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+}
+
+/*conf do texto dentro do header-block*/
+.header-block .texto {
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+}
+
+/*conf do título dentro do header-block*/
+.header-block .texto h2 {
+  color: white;
+  margin-bottom: 30px;
+  text-align: right;
+  transform: translateX(-20px); /*animaçãp sempre que carregar a pag*/
+  transition: transform 0.5s;
+}
+
+/*conf do texto dentro do header-block*/
+.header-block .texto p {
+  max-width: 280px;
+  color: white;
+  text-align: right;
+  transform: translateX(-20px); /*animaçãp sempre que carregar a pag*/
+  transition: transform 0.4s;
+}
+
+/*CARDAPIO*/
+.cardapio {
+  width: 100vw;
+  padding: 10px;
+}
+
+/*caixa abaixo do quadro azul*/
+.cardapio-caixa {
+  width: 980px;
+  height: 150px;
+  background: var(--azul3);
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /*botão e input alinhados no eixeo x*/
+  justify-content: center; /*botão e input alinhados no eixo y*/
+}
+
+/*caixa de pesquisa*/
+.caixa-pesquisa {
+  width: 700px;
+  height: 50px;
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  text-indent: 10px; /*muda o texto dentro da caixa de pesquisa*/
+}
+
+/*botao de procura*/
+.botao-pesquisa {
+  width: 150px;
+  height: 70px;
+  border-radius: 0px 4px 4px 0px;
+  border: none;
+  background: var(--marron2);
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+/*mudar o botao de procurar qdo passar o mouse*/
+.botao-pesquisa:hover {
+  background: #dedede;
+  color: var(--azul1);
+}
+
+/*parte que fica as fotos do cardapio*/
+.cartao-cardapio {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+/*parte escrita do cardapio*/
+.cartao-content {
+  width: 250px;
+  height: 100px;
+  margin: 70px;
+}
+
+.item-cardapio {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 300px;
+  background: var(--rosa2);
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-gap: 30px;
+}
+
+/*imagens do cardapio*/
+.item-cardapio img {
+  width: 350px;
+  margin: 64px;
+  border-radius: 70px;
+}
+
+/*botao cardapio*/
+.botao-comprar {
+  width: 150px;
+  height: 50px;
+  margin: 40px;
+  border: none;
+  background: var(--marron2);
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*FOOTER*/
+footer {
+  width: 100%;
+  height: 250px;
+}
+
+.rodape-inicio {
+  width: 100%;
+  height: 100px;
+  background: var(--marron2);
+  padding: 20px 20px;
+}
+
+.content-rodape-inicio {
+  max-width: 1000px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rodape-icone,
+.rodape-contato,
+.rodape-redes-social {
+  height: 100%;
+  margin: 10px;
+
+  color: white;
+}
+
+.rodape-icone img {
+  width: 32px;
+}
+
+.rodape-ultimo {
+  width: 100%;
+  height: 50px;
+  background: var(--blue);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*FORMULÁRIO*/
+.formulario {
+  width: 550px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+form {
+  margin-top: 70px;
+  text-align: center;
+}
+
+fieldset {
+  border-radius: 15px;
+  border: 1px solid var(--marron2);
+  background: var(--rosa2);
+  font-size: 30px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.botao {
+  cursor: pointer;
+  bottom: 10px;
+}
+
+input,
+textarea {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
